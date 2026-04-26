@@ -115,7 +115,7 @@ A correct output from this policy includes:
 
 ---
 
-## Example Structure
+## Example Structure 1 
 
 ```latex
 \documentclass[tikz, border=4pt]{standalone}
@@ -157,3 +157,11 @@ A correct output from this policy includes:
 % \caption{Accuracy over training time for Model A and Model B. Model A converges faster but reaches a similar final accuracy to Model B.}
 % \label{fig:accuracy-comparison}
 ```
+
+## Example Structure 2
+
+TBC 
+
+## Example Structure 10 
+
+TBC
