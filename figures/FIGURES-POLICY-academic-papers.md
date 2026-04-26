@@ -51,6 +51,7 @@ These principles are adapted from the "Ten Simple Rules for Better Figures" fram
 - Limit the number of distinct colors to what is strictly necessary (typically ≤ 5 for line plots).
 - Avoid overly saturated or neon colors.
 - Use grayscale-safe choices when color reproduction cannot be guaranteed.
+- **For branded or non-anonymous figures**, use the canonical palette defined in [`design/COLOR-PALETTE-POLICY.md`](../design/COLOR-PALETTE-POLICY.md). That policy provides ready-to-use `\definecolor` blocks for TikZ and `rcParams` defaults for Matplotlib.
 
 ### 7. Do Not Mislead the Reader
 - Always start y-axes at zero for bar charts unless there is a documented, explicitly stated reason not to.
@@ -70,10 +71,28 @@ These principles are adapted from the "Ten Simple Rules for Better Figures" fram
 - Resist adding visual polish that complicates the code and reduces maintainability.
 
 ### 10. Get the Right Tool
+
+When necessary, use the following tools available in this environment:
+
+**LaTeX-native (preferred for journal submission):**
 - Use PGFPlots for data-driven charts (line, bar, scatter, histogram, heatmap).
 - Use TikZ for diagrams, architecture drawings, flowcharts, and annotated schematics.
 - Use `standalone` document class for figures to be compiled independently.
 - Use `\input{}` or `\includegraphics{}` of a compiled PDF for embedding into the main document.
+
+**Matplotlib (Python):**
+- Matplotlib is a Python plotting library, primarily for 2-D plotting but with some 3-D support. It produces publication-quality figures in a variety of hardcopy formats and interactive environments across platforms. It comes with a huge gallery of examples covering virtually all scientific domains (http://matplotlib.org/gallery.html).
+- Python 3.x is installed. Use Matplotlib when the data pipeline is Python-based or when PGFPlots is impractical.
+- Export figures as PDF or EPS for lossless embedding in LaTeX.
+
+**R (ggplot2 / plotly):**
+- R is a language and environment for statistical computing and graphics. It provides a wide variety of statistical (linear and nonlinear modeling, classical statistical tests, time-series analysis, classification, clustering, etc.) and graphical techniques, and is highly extensible.
+- R is installed. Use `ggplot2` for publication-quality static figures and `plotly` for interactive visualizations.
+- Export from R as PDF or SVG for LaTeX inclusion.
+
+**ImageMagick:**
+- ImageMagick is a software suite to create, edit, compose, or convert bitmap images from the command line. It can be used to quickly convert an image into another format, and the extensive script gallery (http://www.fmwconcepts.com/imagemagick/index.php) by Fred Weinhaus provides virtually any image effect.
+- It is installed at `/opt/homebrew/bin/magick`. Use it for image format conversion, cropping, compositing, or batch processing of raster figures when needed.
 
 ---
 

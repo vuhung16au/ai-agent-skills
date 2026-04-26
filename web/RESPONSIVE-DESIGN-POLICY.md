@@ -114,6 +114,7 @@ h1 {
 - Ensure keyboard navigation follows a logical tab order.
 - Use `focus-visible` styles so keyboard users can see the focus indicator.
 - Add `aria-label` to icon-only buttons and interactive elements without visible text.
+- **For brand-consistent color choices**, apply the semantic CSS custom properties defined in [`design/COLOR-PALETTE-POLICY.md`](../design/COLOR-PALETTE-POLICY.md). The palette is pre-validated for accessible contrast on recommended pairings.
 
 ### Navigation Patterns
 - On mobile, use hamburger menus or bottom navigation only when the navigation exceeds what fits comfortably.

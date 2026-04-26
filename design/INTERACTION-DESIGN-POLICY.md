@@ -94,6 +94,7 @@ Good: "Email address is already in use. Sign in instead, or use a different emai
 - Use the same component for the same purpose everywhere. Do not create one-off variations without justification.
 - Reuse the same terminology for the same actions and objects throughout the product.
 - Maintain consistent spacing, iconography style, and motion duration.
+- **Use the brand color palette for all color decisions.** Refer to [`design/COLOR-PALETTE-POLICY.md`](COLOR-PALETTE-POLICY.md) for the canonical palette, semantic token mapping, and per-medium application rules.
 
 ### UX Writing
 - Call-to-action labels must be verb-noun pairs that describe the outcome: "Save Changes", "Delete Account", "Add Item".

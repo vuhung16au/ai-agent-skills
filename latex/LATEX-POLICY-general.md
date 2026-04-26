@@ -78,6 +78,7 @@ Apply this policy when generating or modifying:
 - Do not hardcode the file extension in `\includegraphics` — let LaTeX find the right format.
 - Place `\label` after `\caption` within the `figure` environment.
 - Captions must be informative: describe the figure's content and key takeaway.
+- **For branded figures using custom colors**, use the `\definecolor` block from [`design/COLOR-PALETTE-POLICY.md`](../design/COLOR-PALETTE-POLICY.md) as the source of truth for color names and RGB values.
 
 ```latex
 \begin{figure}[htbp]
