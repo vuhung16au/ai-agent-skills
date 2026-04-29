@@ -4,6 +4,8 @@
 
 Define how AI coding agents should generate figure code for academic papers. This policy governs TikZ, PGF, PGFPlots, and related LaTeX figure workflows to produce journal-ready, reproducible, and honest visualizations.
 
+**Related skill (tool choice and patterns):** When deciding among TikZ, pgfplots, and the pgfplots **groupplots** library — and for minimal working examples — use **[`LATEX-SKILL-tikz-pgfplots-groupplots.md`](../latex/LATEX-SKILL-tikz-pgfplots-groupplots.md)**.
+
 ---
 
 ## Scope / When to Use
@@ -75,8 +77,9 @@ These principles are adapted from the "Ten Simple Rules for Better Figures" fram
 When necessary, use the following tools available in this environment:
 
 **LaTeX-native (preferred for journal submission):**
-- Use PGFPlots for data-driven charts (line, bar, scatter, histogram, heatmap).
-- Use TikZ for diagrams, architecture drawings, flowcharts, and annotated schematics.
+- Use **TikZ** to draw diagrams, geometry, flowcharts, architecture sketches, and custom illustrations (coordinate-based shapes and nodes).
+- Use **pgfplots** for data-driven charts and mathematical plots (line, bar, scatter, histogram, heatmap, functions, CSV-backed series) via the `axis` environment and `\addplot`.
+- Use **groupplots** (`\usepgfplotslibrary{groupplots}`) to align multiple pgfplots in a grid (subplots); prefer it over manual `minipage` / `tabular` alignment when axes must line up.
 - Use `standalone` document class for figures to be compiled independently.
 - Use `\input{}` or `\includegraphics{}` of a compiled PDF for embedding into the main document.
 

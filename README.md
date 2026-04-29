@@ -9,7 +9,7 @@ A curated library of reusable **SKILL.md**-style files and **policy files** for 
 | Term | Meaning |
 |------|---------|
 | **SKILL** | A focused instruction file teaching an agent how to use a specific technology, library, or workflow (e.g., LangChain, LangGraph). |
-| **POLICY** | A set of rules and standards an agent must follow when generating code or content in a given domain (e.g., Python style, C# naming, responsive design). |
+| **POLICY** | A set of rules and standards an agent must follow when generating code or content in a given domain (e.g., Python style, C# naming, LaTeX and bibliography files, color palettes, responsive design). |
 
 Both file types are written in Markdown and designed to be:
 - Pasted directly into `AGENTS.md`, `.github/copilot-instructions.md`, or system prompts.
@@ -40,6 +40,7 @@ ai-agent-skills/
 │   ├── LANGGRAPH-SKILL.md
 │   └── ML-POLICY-general.md
 ├── design/
+│   ├── COLOR-PALETTE-POLICY.md
 │   └── INTERACTION-DESIGN-POLICY.md
 ├── desktop/
 │   └── ELECTRONJS-POLICY.md
@@ -53,7 +54,9 @@ ai-agent-skills/
 ├── java/
 │   └── SPRINGBOOT-BACKEND-API-POLICY.md
 ├── latex/
-│   └── LATEX-POLICY-general.md
+│   ├── LATEX-POLICY-bib-files.md
+│   ├── LATEX-POLICY-general.md
+│   └── LATEX-SKILL-tikz-pgfplots-groupplots.md
 ├── python/
 │   └── PYTHON-POLICY-general.md
 ├── testing/
@@ -70,7 +73,7 @@ ai-agent-skills/
 - **SKILL files**: `<TECHNOLOGY>-SKILL.md` — for tool-specific how-to guidance.
 - **POLICY files**: `<TECHNOLOGY>-POLICY[-scope].md` — for standards and rules agents must follow.
 - Use **UPPERCASE-WITH-HYPHENS** for the primary identifier portion.
-- Use **kebab-case** for any scope qualifiers (e.g., `-general`, `-academic-papers`).
+- Use **kebab-case** for any scope qualifiers (e.g., `-general`, `-academic-papers`, `-bib-files`).
 - Category folders use lowercase (e.g., `python/`, `dotnet/`, `web/`).
 
 ---

@@ -92,6 +92,7 @@ docker run --rm -v "$(pwd)":/workspace -w /workspace dallay/texlive:2025 \
 ### Document Class and Preamble
 - Specify the document class explicitly with relevant options: `\documentclass[12pt, a4paper]{article}`.
 - Load packages in a deliberate order: encoding → fonts → layout → math → figures → tables → bibliography → hyperref last.
+- For in-document vector graphics, load `tikz` and/or `pgfplots` with figure-related packages; use `\usepgfplotslibrary{groupplots}` only when building multi-panel pgfplots grids. Usage patterns are in **[`LATEX-SKILL-tikz-pgfplots-groupplots.md`](LATEX-SKILL-tikz-pgfplots-groupplots.md)**.
 - Choose the encoding/font setup based on the target engine:
   - **pdflatex** (arXiv/journals): use `inputenc` with `utf8` and `fontenc` with `T1`.
   - **xelatex / lualatex** (personal documents): use `fontspec` instead; omit `inputenc` and `fontenc`.
@@ -150,6 +151,7 @@ docker run --rm -v "$(pwd)":/workspace -w /workspace dallay/texlive:2025 \
 
 ### Figures
 - Always place figures in a `figure` float environment with `\caption` and `\label`.
+- For **vector graphics generated in LaTeX** (diagrams and plots with matched document fonts), use **TikZ** for drawings, **pgfplots** for charts and functions, and the **groupplots** library for multi-panel grids. Patterns and the “when to use which” summary live in **[`LATEX-SKILL-tikz-pgfplots-groupplots.md`](LATEX-SKILL-tikz-pgfplots-groupplots.md)**. Academic figure rules (sizing, color, honesty, captions) are in **[`../figures/FIGURES-POLICY-academic-papers.md`](../figures/FIGURES-POLICY-academic-papers.md)**.
 - Use `\includegraphics[width=\linewidth]{filename}` (or `\columnwidth` for two-column layouts).
 - Include figures as PDF (vector) files for line art and plots; PNG at 300 dpi minimum for photographs.
 - Do not hardcode the file extension in `\includegraphics` — let LaTeX find the right format.
